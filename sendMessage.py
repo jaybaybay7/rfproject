@@ -7,4 +7,4 @@ import RPi.GPIO as GPIO
 #The first is using the BOARD numbering system. This refers to the pin numbers on the P1 header of the Raspberry Pi board. 
 GPIO.setmode(GPIO.BOARD)
 
-print(GPIO.getmode())
+GPIO.output(38,1)
