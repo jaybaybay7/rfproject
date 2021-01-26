@@ -13,7 +13,7 @@ while True:
         msgGet = rx.get()
         print(msgGet)
 
-    time.sleep(0.5)
+time.sleep(0.5)
 
 if msgGet = msg:
     GPIO.output(25,1)
