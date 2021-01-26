@@ -10,7 +10,7 @@ rx = piVirtualWire.rx(pi,2,1000)
 
 while True:
    while rx.ready():
-        msgGet = rx.get()
+        msgGet == rx.get()
         print(msgGet)
 
 time.sleep(0.5)
