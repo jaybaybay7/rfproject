@@ -4,6 +4,8 @@ import piVirtualWire.piVirtualWire as piVirtualWire
 import RPi.GPIO as GPIO
 import pigpio
 
+GPIO.setmode(BOARD)
+
 pi = pigpio.pi()
 rx = piVirtualWire.rx(pi,2,1000)
 GPIO.setup(13,GPIO.IN)
