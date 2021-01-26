@@ -7,7 +7,7 @@ import pigpio
 pi = pigpio.pi()
 rx = piVirtualWire.rx(pi,2,1000)
 
-msg = "100"
+msg = "hi"
 
 while True:
    while rx.ready():

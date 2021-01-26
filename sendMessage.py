@@ -17,9 +17,10 @@ import pigpio
 pi = pigpio.pi()
 tx = piVirtualWire.tx(pi,27,1000)
 
-msg = "100"
+msg = "hi"
 
 tx.put(msg)
+print(tx.put(msg))
 tx.waitForReady()
 
 tx.cancel()
