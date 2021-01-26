@@ -6,17 +6,18 @@ import pigpio
 
 pi = pigpio.pi()
 rx = piVirtualWire.rx(pi,2,1000)
+GPIO.setup(13,GPIO.IN)
 
 msg = "hi"
 
 while True:
    while rx.ready():
-        msgGet = rx.get()
-        print(msgGet)
+        print(rx.get())
 
 time.sleep(0.5)
 
 if msgGet == msg:
+
     GPIO.output(25,1)
 
 
