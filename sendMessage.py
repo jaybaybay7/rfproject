@@ -25,28 +25,5 @@ tx.waitForReady()
 tx.cancel()
 pi.stop()
 
-while True:
-   while rx.ready():
-        msgGet = rx.get()
-        print(msgGet)
-
-    time.sleep(0.5)
-
-if msgGet = msg:
-    GPIO.output(25,1)
 
 
-tx.cancel()
-rx.cancel()
-
-pi.stop()
-
-
-
-
-
-
-
-
-#GPIO.setup(38,GPIO.OUT)
-#GPIO.output(38,1)
