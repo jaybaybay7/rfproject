@@ -19,9 +19,9 @@ tx = piVirtualWire.tx(pi,27,1000)
 
 msg = "hi"
 
-tx.put(msg)
-print(tx.put(msg))
-tx.waitForReady()
+while True:
+    tx.put(msg)
+    tx.waitForReady()
 
 tx.cancel()
 pi.stop()
