@@ -10,12 +10,12 @@ rx = piVirtualWire.rx(pi,2,1000)
 
 while True:
    while rx.ready():
-        msgGet == rx.get()
+        msgGet = rx.get()
         print(msgGet)
 
 time.sleep(0.5)
 
-if msgGet = msg:
+if msgGet == msg:
     GPIO.output(25,1)
 
 
