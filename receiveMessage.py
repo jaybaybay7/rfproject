@@ -28,7 +28,7 @@ msg = "hi"
 # pi.stop()
 
 while True:
-    state = GPIO.input()
+    state = GPIO.input(13)
     print(state)
     time.sleep(0.1)
 
