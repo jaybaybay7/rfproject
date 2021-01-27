@@ -32,7 +32,7 @@ state = True
 
 while True:
     print('state')
-    GPIO.output(37, GPIO.state)
+    GPIO.output(37, state)
     time.sleep(1)
     state = not state
 
