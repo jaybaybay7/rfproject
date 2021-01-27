@@ -12,8 +12,11 @@ GPIO.setup(13,GPIO.IN)
 
 msg = "hi"
 
+print ("hi")
+
 while True:
-   while rx.ready():
+    # print (rx.ready())
+    while rx.ready():
         print(rx.get())
 
 time.sleep(0.5)
