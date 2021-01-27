@@ -3,25 +3,33 @@
 import piVirtualWire.piVirtualWire as piVirtualWire
 import RPi.GPIO as GPIO
 import pigpio
+import time
 
 GPIO.setmode(GPIO.BOARD)
 
-pi = pigpio.pi()
-rx = piVirtualWire.rx(pi,2,1000)
+# pi = pigpio.pi()
+# rx = piVirtualWire.rx(pi,2,1000)
 GPIO.setup(13,GPIO.IN)
 
 msg = "hi"
+#
+# while True:
+#    while rx.ready():
+#         print(rx.get())
+#
+# time.sleep(0.5)
+#
+# if msgGet == msg:
+#
+#     GPIO.output(25,1)
+#
+#
+# rx.cancel()
+# pi.stop()
 
-while True:
-   while rx.ready():
-        print(rx.get())
+while TRUE:
+    state = GPIO.input()
+    print(state)
+    time.sleep(0.1)
 
-time.sleep(0.5)
-
-if msgGet == msg:
-
-    GPIO.output(25,1)
-
-
-rx.cancel()
-pi.stop()
+GPIO.cleanup()
