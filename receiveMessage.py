@@ -15,11 +15,15 @@ msg = "hi"
 print ("hi")
 
 while True:
-    # print (rx.ready())
+    print("hello")
+    print (rx.ready())
     while rx.ready():
+        print("hola")
         print(rx.get())
 
+print("forth")
 time.sleep(0.5)
+
 
 if msgGet == msg:
 
