@@ -31,7 +31,7 @@ print('running')
 state = True
 
 while True:
-    print('state')
+    print(state)
     GPIO.output(37, state)
     time.sleep(1)
     state = not state
