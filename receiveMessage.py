@@ -8,7 +8,7 @@ GPIO.setmode(GPIO.BOARD)
 
 pi = pigpio.pi()
 rx = piVirtualWire.rx(pi,2,1000)
-GPIO.setup(13,GPIO.IN)
+GPIO.setup(37,GPIO.OUT)
 
 msg = "hi"
 
@@ -20,7 +20,7 @@ time.sleep(0.5)
 
 if msgGet == msg:
 
-    GPIO.output(25,1)
+    GPIO.output(37,1)
 
 
 rx.cancel()
