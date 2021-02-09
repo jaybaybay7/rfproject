@@ -4,21 +4,34 @@ import pigpio
 import time
 
 
+#There are two ways of numbering the IO pins on a Raspberry Pi within RPi.GPIO.
+#The first is using the BOARD numbering system. This refers to the pin numbers on the P1 header of the Raspberry Pi board.
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(37,GPIO.OUT)
-                 
 
-print('running')
-state = True
 
-counter = 0
+pi = pigpio.pi()
+tx = piVirtualWire.tx(pi,27,2000)
 
-while counter < 10:
-    print(state)
-    GPIO.output(37, state)
-    counter = counter  + 1
-    if counter == 9:
-        state = not state
-        counter = 0
+msg = "42"
 
-GPIO.cleanup()
+while True:
+    tx.put(msg)
+    tx.waitForReady()
+    print(tx.put(msg))
+    print(tx.waitForReady)
+
+tx.cancel()
+pi.stop()
+
+
+# print('running')
+# state = True
+
+# while True:
+#     print(state)
+#     GPIO.output(37, state)
+#     time.sleep(1)
+#     state = not state
+
+# GPIO.cleanup()

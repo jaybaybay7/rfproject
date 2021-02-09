@@ -3,32 +3,35 @@
 import piVirtualWire.piVirtualWire as piVirtualWire
 import RPi.GPIO as GPIO
 import pigpio
+import time
 
 GPIO.setmode(GPIO.BOARD)
 
 pi = pigpio.pi()
-rx = piVirtualWire.rx(pi,2,1000)
-GPIO.setup(37,GPIO.OUT)
+rx = piVirtualWire.rx(pi,2,2000)
+GPIO.setup(13,GPIO.IN)
 
 msg = "hi"
 
-print ("hi")
-
-while True:
-    print("hello")
-    print (rx.ready())
+ while True:
     while rx.ready():
-        print("hola")
+        print(rx.ready())
+        msgGet = rx.get()
         print(rx.get())
 
-print("forth")
-time.sleep(0.5)
-
-
-if msgGet == msg:
-
-    GPIO.output(37,1)
-
+ time.sleep(0.5)
+ 
+# if msgGet == msg:
+#     GPIO.output(25,1)
 
 rx.cancel()
 pi.stop()
+ssh
+# print ("hi")
+
+# while True:
+#     state = GPIO.input(13)
+#     print(state)
+#     time.sleep(0.1)
+
+# GPIO.cleanup()
