@@ -18,8 +18,7 @@ while True:
         print(rx.ready())
         msgGet = rx.get()
         print(rx.get())
-
- time.sleep(0.5)
+        time.sleep(0.5)
  
 # if msgGet == msg:
 #     GPIO.output(25,1)
