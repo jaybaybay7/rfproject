@@ -13,7 +13,7 @@ GPIO.setup(13,GPIO.IN)
 
 msg = "hi"
 
- while True:
+while True:
     while rx.ready():
         print(rx.ready())
         msgGet = rx.get()
