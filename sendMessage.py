@@ -1,4 +1,4 @@
-mport piVirtualWire.piVirtualWire as piVirtualWire
+import piVirtualWire.piVirtualWire as piVirtualWire
 import RPi.GPIO as GPIO
 import pigpio
 import time
