@@ -8,6 +8,6 @@ GPIO.setup(13, GPIO.IN)
 msg = 12345
 
 while True:
-if GPIO.input(13) == msg:
-    GPIO.output(40,1)
+    if GPIO.input(13) == msg:
+        GPIO.output(40,1)
 
