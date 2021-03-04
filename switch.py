@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(38,GPIO.OUT)
+GPIO.setup(20,GPIO.OUT)
 
 
 rfdevice = RFDevice(27)
