@@ -39,7 +39,9 @@ while True:
         logging.info(str(rfdevice.rx_code) +
                      " [pulselength " + str(rfdevice.rx_pulselength) +
                      ", protocol " + str(rfdevice.rx_proto) + "]")
+        print(str(rfdevice.rx_code))
         if str(rfdevice.rx_code) == str(345):
+            print(str(rfdevice.rx_code))
             GPIO.output(20,1)
     time.sleep(0.01)
 rfdevice.cleanup()
