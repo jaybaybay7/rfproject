@@ -44,5 +44,8 @@ while True:
         if str(rfdevice.rx_code) == str(345):
             print(str(rfdevice.rx_code))
             GPIO.output(20,1)
+        if tr(rfdevice.rx_code) == str(789):
+            print(str(rfdevice.rx_code))
+            GPIO.output(20,0)
     time.sleep(0.01)
 rfdevice.cleanup()
