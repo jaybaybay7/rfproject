@@ -9,6 +9,8 @@ import RPi.GPIO as GPIO
 
 from rpi_rf import RFDevice
 
+GPIO.setmode(GPIO.BCM)
+
 GPIO.setup(20,GPIO.OUT)
 
 rfdevice = None
