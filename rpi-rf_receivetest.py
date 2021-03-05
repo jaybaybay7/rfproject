@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import argparse
 import signal
@@ -46,6 +46,7 @@ while True:
             GPIO.output(20,1)
         if str(rfdevice.rx_code) == str(789):
             print(str(rfdevice.rx_code))
+            time.sleep(10)
             GPIO.output(20,0)
     time.sleep(0.01)
 rfdevice.cleanup()
