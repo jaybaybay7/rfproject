@@ -11,8 +11,8 @@ from rpi_rf import RFDevice
 
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(20,GPIO.OUT)
-GPIO.output(20,0)
+GPIO.setup(16,GPIO.OUT)
+GPIO.output(16,0)
 
 rfdevice = None
 
@@ -43,10 +43,10 @@ while True:
         print(str(rfdevice.rx_code))
         if str(rfdevice.rx_code) == str(345):
             print(str(rfdevice.rx_code))
-            GPIO.output(20,1)
+            GPIO.output(16,1)
         if str(rfdevice.rx_code) == str(789):
             print(str(rfdevice.rx_code))
             time.sleep(10)
-            GPIO.output(20,0)
+            GPIO.output(16,0)
     time.sleep(0.01)
 rfdevice.cleanup()
