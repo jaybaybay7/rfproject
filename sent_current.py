@@ -19,11 +19,14 @@ chan = AnalogIn(ads, ADS.P0)
 
 print("{:>5}\t{:>5}".format("raw", "v"))
 
+turnOnInt = 345
+turnOffInt = 789
+
 while True:
     print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage))
     time.sleep(0.5)
     if chan.voltage != 0:
-        subprocess.call('python3','rpi-fr_send.py',345)
+        subprocess.call('python3','rpi-fr_send.py',turnOnInt)
     else:
-        subprocess.call('python3','rpi-fr_send.py',789)
+        subprocess.call('python3','rpi-fr_send.py',turnOffInt)
         
